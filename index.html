@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>INVITATION</title>
+  <style>
+    body {
+  transform: scale(1.15); /* 1.0 is normal, 1.05 = 105% */
+  transform-origin: top center; /* prevents shifting */
+  }
+    .hero-section {
+      transform: translateY(-250px);
+      
+      background-image: url(home.jpg); /* replace with your image path */
+      background-size: cover;
+      background-position: center;
+      height: 100vh; /* full viewport height */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+    @font-face {
+    font-family: 'oswald';
+    src: url("Oswald-VariableFont_wght.ttf") format('truetype');
+        
+    font-weight: normal;
+    font-style: normal;
+  
+}
+.hero-text {
+  animation: fadeInUp 1s ease-out;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+  .hero-text {
+    padding: 30px;
+    font-size: medium;
+  }
+  .btn {
+    font-size: small;
+    padding: 0.7em 1.5em;
+  }
+}
+
+  h1{
+    letter-spacing: 1.5px;
+  }
+      @font-face {
+    font-family: 'block';
+    src: url("Gobold\ Blocky\ Regular.otf") format('opentype');
+        
+    font-weight: normal;
+    font-style: normal;
+      }
+
+    .hero-text {
+      transform: translateY(-50px);
+      background-color: rgba(0, 0, 0, 0.65); /* optional: semi-transparent background */
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+      margin-top: 20px;
+      padding: 50px;
+      border-radius: 20px;
+      font-family: "oswald";
+      
+      font-size: larger;
+    }
+    .date{
+      
+      font-family: 'block';
+      color: beige;
+      font-size: larger;
+      
+      
+    }
+    .btn {
+      text-decoration: none;
+      padding: 1em 2em;
+      background-color: black;
+      
+      border-radius: 1000px;
+      font-size: medium;
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid transparent; 
+      outline: 3px solid #D4A373;     
+      transition: box-shadow 0.3 ease;
+    }
+    
+    .btn:hover{
+       background: linear-gradient(to right, #9e6438, #2C2C2C);
+       color: white;
+       box-shadow: 0 0 20px #9e6438;
+       transform: scale(1.05);
+       transition: all 0.3s ease;
+    }
+    img{
+      margin-left: 50px;
+      
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero-section">
+    <div class="hero-text">
+      <h1>WELCOME TO OUR NEW HOUSE</h1>
+      <h2><pe>YOU'RE INVITED TO <br>WARM OUR NEW HOUSE WITH JOY</h2> </pe>
+      <div class="date">
+          <h2><class ="date"></class>FRIDAY ,  JUNE   6TH   AT  5:30AM</h2>
+      </div>
+           <br>
+        <div style="display: flex; align-items: center;">
+          <img src="location.png" alt="Location" width="40" height="40" style="margin-left: 150px;" >
+          <a href="https://maps.app.goo.gl/3cigcZkc1hpa5ayB6" class="btn"><b>Location click here</b></a>
+        </div>
+
+          
+        
+    </div>
+  </div>
+
+</body>
+</html>
