@@ -9,25 +9,29 @@
   transform-origin: top center; /* prevents shifting */
   }
     .hero-section {
-      transform: translateY(-250px);
+      transform: translateY(-660px);
       
-      background-image: url(home.jpg); /* replace with your image path */
+      background-image: url(home_mobile_fixed.jpg); /* replace with your image path */
       background-size: cover;
       background-position: center;
       height: 100vh; /* full viewport height */
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       color: white;
       text-align: center;
       position: relative;
+      
     }
-      html, body {
+
+    html, body {
        margin: 0;
        padding: 0;
        overflow-x: hidden;
-       background-color: #2B2B2B ; /* fallback in case image doesn't fully cover */
+       background-color: #2C2C2C;
+       background: linear-gradient(to top, #2c2a2a, #0d0d0e, #d3d9db);
 }
+
     @font-face {
     font-family: 'oswald';
     src: url("Oswald-VariableFont_wght.ttf") format('truetype');
@@ -63,29 +67,30 @@
   h1{
     letter-spacing: 1.5px;
   }
-      @font-face {
-    font-family: 'block';
-    src: url("Gobold\ Blocky\ Regular.otf") format('opentype');
-        
-    font-weight: normal;
-    font-style: normal;
-      }
+  @font-face {
+  font-family: 'Boldness';
+  src: url('boldness.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
     .hero-text {
-      transform: translateY(-50px);
+      margin-top: 200px;
       background-color: rgba(0, 0, 0, 0.65); /* optional: semi-transparent background */
       text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-      margin-top: 20px;
+      margin-top: 1800px;
       padding: 50px;
       border-radius: 20px;
-      font-family: "oswald";
+      font-family: 'Boldness';
       
       font-size: larger;
+      animation: fadeInUp is ease-out;
     }
     .date{
       
-      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-      color: beige;
+      font-family: 'Boldness';
+      color: rgb(255, 255, 0);
       font-size: larger;
       
       
@@ -94,9 +99,9 @@
       text-decoration: none;
       padding: 1em 2em;
       background-color: black;
-      
+      transform: translateX(-75px);
       border-radius: 1000px;
-      font-size: medium;
+      font-size: large;
       color: white;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: inline-flex;
@@ -111,21 +116,44 @@
        background: linear-gradient(to right, #9e6438, #2C2C2C);
        color: white;
        box-shadow: 0 0 20px #9e6438;
-       transform: scale(1.05);
+       transform: scale(1);
        transition: all 0.3s ease;
     }
-    img{
-      margin-left: 50px;
-      
+    
+    .watermark {
+  position: fixed;
+  bottom: 10px;
+  left: 100px;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.4); /* Light & subtle */
+  font-family: sans-serif;
+  z-index: 999;
+  pointer-events: none; /* So it doesn't interfere with clicks */
+}
+    .watermark2 {
+  position: fixed;
+  bottom: 10px;
+  right: 100px;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.4); /* Light & subtle */
+  font-family: sans-serif;
+  z-index: 999;
+    }
+
+
+    .inv{
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
   </style>
 </head>
 <body>
-
+  
+    
   <div class="hero-section">
+    
     <div class="hero-text">
-      <h1>WELCOME TO OUR NEW HOUSE</h1>
-      <h2><pe>YOU'RE INVITED TO <br>WARM OUR NEW HOUSE WITH JOY</h2> </pe>
+       <h1>WELCOME TO OUR NEW HOUSE</h1>
+     <div class="inv"> <h2><pe>YOU'RE INVITED TO <br>WARM OUR NEW HOUSE WITH JOY</h2> </pe></div>
       <div class="date">
           <h2><class ="date"></class>FRIDAY ,  JUNE   6TH   AT  5:30AM</h2>
       </div>
@@ -134,7 +162,9 @@
           <img src="location.png" alt="Location" width="40" height="40" style="margin-left: 150px;" >
           <a href="https://maps.app.goo.gl/3cigcZkc1hpa5ayB6" class="btn"><b>Location click here</b></a>
         </div>
-
+    <div class="watermark">© jeganathan</div>
+    <div class="watermark2">© yethies</div>
+    
           
         
     </div>
